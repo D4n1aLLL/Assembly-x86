@@ -109,8 +109,7 @@ TOH PROC
 		push esi
 		call TOH
 	L1:
-		mov esp,ebp
 		pop ebp
-		ret
+		ret 16 ; Removing parameters passed to the procedure from stack, in our case we passed 4 arguments and each of them is of 4 byte
 TOH endp
 end main
